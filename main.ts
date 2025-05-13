@@ -2,6 +2,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, 
     mySprite.setPosition(128, 128)
     tiles.setCurrentTilemap(tilemap`Level6isreal`)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile121`, function (sprite, location) {
+    mySprite.setPosition(128, 128)
+    tiles.setCurrentTilemap(tilemap`Level12isreal`)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, location) {
     mySprite.setPosition(128, 128)
     tiles.setCurrentTilemap(tilemap`Level7isreal`)
@@ -13,6 +17,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile60`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     mySprite.setPosition(128, 128)
     tiles.setCurrentTilemap(tilemap`Level3isreal`)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile117`, function (sprite, location) {
+    mySprite.setPosition(128, 128)
+    tiles.setCurrentTilemap(tilemap`Secret`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile85`, function (sprite, location) {
     mySprite.setPosition(128, 128)
@@ -113,13 +121,13 @@ mySprite = sprites.create(img`
     .................................................
     .................................................
     `, SpriteKind.Player)
-tiles.setCurrentTilemap(tilemap`Level1isreal`)
+tiles.setCurrentTilemap(tilemap`Level10isreal`)
 mySprite.setPosition(128, 128)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(300)
 Render.setViewMode(ViewMode.raycastingView)
-music.play(music.createSong(hex`0078000408020200001c00010a006400f4016400000400000000000000000000000000050000046200000004000222290400080002202a08000c0001240c001000021e251000140002202914001800031e242918001c0001241c0020000320242920002400021d292400280002202728002c0002222a2c003000021d2730003400021b273400380002222a08001c000e050046006603320000040a002d00000064001400013200020100024600000004000125040008000219270c001000031b222a18001c000219271c002000011d20002400012024002800012428002c00011b2c003000012a300034000122340038000127`), music.PlaybackMode.LoopingInBackground)
+music.play(music.createSong(hex`0078000408020100001c00010a006400f4016400000400000000000000000000000000050000046200000004000222290400080002202a08000c0001240c001000021e251000140002202914001800031e242918001c0001241c0020000320242920002400021d292400280002202728002c0002222a2c003000021d2730003400021b273400380002222a`), music.PlaybackMode.LoopingInBackground)
 music.play(music.stringPlayable("C5 B A G F E D C ", 200), music.PlaybackMode.LoopingInBackground)
 music.play(music.stringPlayable("C5 B C5 B C5 B C5 B ", 100), music.PlaybackMode.LoopingInBackground)
 music.play(music.stringPlayable("D E D E D E D E ", 100), music.PlaybackMode.LoopingInBackground)
